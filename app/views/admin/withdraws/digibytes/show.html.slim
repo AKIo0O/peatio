@@ -1,0 +1,30 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @digibyte.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @digibyte, :id
+          = item_for @digibyte, :created_at
+          = item_for @digibyte, :aasm_state_text
+          hr.split
+          = item_for @digibyte.member, :name
+          = item_for @digibyte, :fund_extra
+          = item_for @digibyte, :fund_uid do
+            span = @digibyte.fund_uid.truncate(22)
+          = item_for @digibyte, :amount
+          hr.split
+          = item_for @digibyte, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @digibyte.may_reject?
+              li
+                = link_to t('.reject'), url_for([:admin, @digibyte]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @digibyte.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @digibyte]), class: 'btn btn-primary', method: 'PATCH'
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @digibyte.member}
+    = render partial: 'shared/admin/account', locals: {account: @digibyte.account}

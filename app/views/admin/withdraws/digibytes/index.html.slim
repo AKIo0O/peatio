@@ -1,0 +1,11 @@
+- unless @one_digibytes.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {digibytes: @one_digibytes}
+- unless @all_digibytes.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {digibytes: @all_digibytes}
+
+- if @all_digibytes.empty? and @one_digibytes.empty?
+  h3.text-info.text-center = t('.empty')
