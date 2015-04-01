@@ -35,7 +35,7 @@ namespace :replay do
 
     puts "#{bln_arr.size} -> "
 
-    balances = {'btc' => [], 'cny' => []}
+    balances = {'btc' => [], 'cny' => [], 'dgb' => []}
     m.accounts.each do |acc|
       next unless balances.keys.include?(acc.currency)
       v0 = acc.versions.order(:id).where('created_at < ?', start).last
@@ -74,7 +74,7 @@ namespace :replay do
 
     puts "#{bln_arr.size} -> "
 
-    balances = {'btc' => [], 'cny' => []}
+    balances = {'btc' => [], 'cny' => [], "dgb" => []}
     m.accounts.each do |acc|
       next unless balances.keys.include?(acc.currency)
       v0 = acc.versions.order(:id).where('created_at < ?', start).last

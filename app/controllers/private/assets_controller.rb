@@ -4,14 +4,11 @@ module Private
 
     def index
       @cny_assets  = Currency.assets('cny')
+      @dgb_assets  = Currency.assets('dgb')
       @btc_proof   = Proof.current :btc
       @cny_proof   = Proof.current :cny
       @dgb_proof   = Proof.current :dgb
 
-      if current_user
-        @btc_account = current_user.accounts.with_currency(:btc).first
-        @dgb_account = current_user.accounts.with_currency(:dgb).first
-      end
       if current_user
         @btc_account = current_user.accounts.with_currency(:btc).first
         @dgb_account = current_user.accounts.with_currency(:dgb).first
