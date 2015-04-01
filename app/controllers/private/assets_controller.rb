@@ -11,7 +11,7 @@ module Private
       if current_user
         @btc_account = current_user.accounts.with_currency(:btc).first
         @dgb_account = current_user.accounts.with_currency(:dgb).first
-
+      end
       if current_user
         @btc_account = current_user.accounts.with_currency(:btc).first
         @dgb_account = current_user.accounts.with_currency(:dgb).first
@@ -26,6 +26,5 @@ module Private
         format.js
       end
     end
-
   end
 end
