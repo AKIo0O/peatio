@@ -683,15 +683,23 @@ zh-CN:
       index:
         liability-proof: 资产证明
         btc-assets: BTC资产清单
+<<<<<<< HEAD
         dgb-assets: DGB资产清单
+=======
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
         cny-assets: CNY资产清单
       liability_tabs:
         verify-btc: 验证我的BTC资产
         verify-cny: 验证我的CNY资产
+<<<<<<< HEAD
         verify-dgb: 验证我的DGB资产
         btc-assets-total: '交易所BTC总资产：'
         cny-assets-total: '交易所CNY总资产：'
         dgb-assets-total: '交易所DGB总资产：'
+=======
+        btc-assets-total: '交易所BTC总资产：'
+        cny-assets-total: '交易所CNY总资产：'
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
       liability_proof:
         title: 资产证明
         intro: 我们将银行账户，比特币钱包地址，以及用户存款总额公开以便用户时刻了解我们的资产状况；我们提供的数字证明能证明我们提供的存款总额数据是真实的。我们通过技术手段来保证您的资金处于随时能够提取的状态。
@@ -704,11 +712,14 @@ zh-CN:
         get-partial-tree: 获取我的资产验证代码
         timestamp: 当前操作仅针对您在%{time}的资产验证。
         go-verify: 去验证
+<<<<<<< HEAD
       dgb_assets:
         title: DGB资产清单
         intro: 查看交易所全部DGB资产清单
         total: DGB总资产
         address: 钱包地址
+=======
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
       btc_assets:
         title: BTC资产清单
         intro: 查看交易所全部BTC资产清单
@@ -726,7 +737,10 @@ zh-CN:
         account_history: 账户历史记录
         cny_format: '0.00'
         btc_format: '0.00000000'
+<<<<<<< HEAD
         dgb_format: '0.00000000'
+=======
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
         reason:
           cny:
             strike_add: 成交卖出
@@ -740,12 +754,15 @@ zh-CN:
             deposit: 充值
             withdraw: 提现
             fix: 系统修正
+<<<<<<< HEAD
           dgb:
             strike_add: 成交买入
             strike_sub: 成交卖出
             deposit: 充值
             withdraw: 提现
             fix: 系统修正
+=======
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
         ref:
           system: 系统
           default: 默认
@@ -789,7 +806,10 @@ zh-CN:
         all_html: "<i class='fa fa-check'></i><span>全部交易对</span>"
         cny_html: "<i class='fa fa-check'></i><span>CNY交易对</span>"
         btc_html: "<i class='fa fa-check'></i><span>BTC交易对</span>"
+<<<<<<< HEAD
         dgb_html: "<i class='fa fa-check'></i><span>DGB交易对</span>"
+=======
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
         price: 最新价
         change: "24h涨跌"
       range_switch:
@@ -969,7 +989,10 @@ zh-CN:
         title: "%{icon} %{c} 账户"
         cny_format: '0.00'
         btc_format: '0.00000000'
+<<<<<<< HEAD
         dgb_format: '0.00000000'
+=======
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
         total: 总额合计
   guides:
     private:
@@ -1343,7 +1366,10 @@ zh-CN:
     currency:
       cny: CNY
       btc: BTC
+<<<<<<< HEAD
       dgb: DGB
+=======
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     order:
       state:
         done: 完全成交

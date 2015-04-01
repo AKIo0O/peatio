@@ -101,7 +101,11 @@ ActiveRecord::Schema.define(version: 20150205011423) do
   add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid", using: :btree
 
   create_table "comments", force: true do |t|
+<<<<<<< HEAD
     t.text     "content",    limit: 16777215
+=======
+    t.text     "content"
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     t.integer  "author_id"
     t.integer  "ticket_id"
     t.datetime "created_at"
@@ -131,6 +135,7 @@ ActiveRecord::Schema.define(version: 20150205011423) do
   add_index "deposits", ["txid", "txout"], name: "index_deposits_on_txid_and_txout", using: :btree
 
   create_table "document_translations", force: true do |t|
+<<<<<<< HEAD
     t.integer  "document_id",                  null: false
     t.string   "locale",                       null: false
     t.datetime "created_at"
@@ -139,6 +144,16 @@ ActiveRecord::Schema.define(version: 20150205011423) do
     t.text     "body",        limit: 16777215
     t.text     "desc",        limit: 16777215
     t.text     "keywords",    limit: 16777215
+=======
+    t.integer  "document_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "body"
+    t.text     "desc"
+    t.text     "keywords"
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
   end
 
   add_index "document_translations", ["document_id"], name: "index_document_translations_on_document_id", using: :btree
@@ -147,12 +162,21 @@ ActiveRecord::Schema.define(version: 20150205011423) do
   create_table "documents", force: true do |t|
     t.string   "key"
     t.string   "title"
+<<<<<<< HEAD
     t.text     "body",       limit: 16777215
     t.boolean  "is_auth"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "desc",       limit: 16777215
     t.text     "keywords",   limit: 16777215
+=======
+    t.text     "body"
+    t.boolean  "is_auth"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "desc"
+    t.text     "keywords"
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
   end
 
   create_table "fund_sources", force: true do |t|
@@ -174,7 +198,11 @@ ActiveRecord::Schema.define(version: 20150205011423) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "birth_date"
+<<<<<<< HEAD
     t.text     "address",            limit: 16777215
+=======
+    t.text     "address"
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     t.string   "city"
     t.string   "country"
     t.string   "zipcode"
@@ -211,12 +239,21 @@ ActiveRecord::Schema.define(version: 20150205011423) do
   end
 
   create_table "oauth_access_grants", force: true do |t|
+<<<<<<< HEAD
     t.integer  "resource_owner_id",                  null: false
     t.integer  "application_id",                     null: false
     t.string   "token",                              null: false
     t.integer  "expires_in",                         null: false
     t.text     "redirect_uri",      limit: 16777215, null: false
     t.datetime "created_at",                         null: false
+=======
+    t.integer  "resource_owner_id", null: false
+    t.integer  "application_id",    null: false
+    t.string   "token",             null: false
+    t.integer  "expires_in",        null: false
+    t.text     "redirect_uri",      null: false
+    t.datetime "created_at",        null: false
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     t.datetime "revoked_at"
     t.string   "scopes"
   end
@@ -240,10 +277,17 @@ ActiveRecord::Schema.define(version: 20150205011423) do
   add_index "oauth_access_tokens", ["token"], name: "index_oauth_access_tokens_on_token", unique: true, using: :btree
 
   create_table "oauth_applications", force: true do |t|
+<<<<<<< HEAD
     t.string   "name",                          null: false
     t.string   "uid",                           null: false
     t.string   "secret",                        null: false
     t.text     "redirect_uri", limit: 16777215, null: false
+=======
+    t.string   "name",         null: false
+    t.string   "uid",          null: false
+    t.string   "secret",       null: false
+    t.text     "redirect_uri", null: false
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -278,9 +322,15 @@ ActiveRecord::Schema.define(version: 20150205011423) do
   add_index "orders", ["state"], name: "index_orders_on_state", using: :btree
 
   create_table "partial_trees", force: true do |t|
+<<<<<<< HEAD
     t.integer  "proof_id",                    null: false
     t.integer  "account_id",                  null: false
     t.text     "json",       limit: 16777215, null: false
+=======
+    t.integer  "proof_id",   null: false
+    t.integer  "account_id", null: false
+    t.text     "json",       null: false
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "sum"
@@ -316,11 +366,19 @@ ActiveRecord::Schema.define(version: 20150205011423) do
   create_table "proofs", force: true do |t|
     t.string   "root"
     t.integer  "currency"
+<<<<<<< HEAD
     t.boolean  "ready",                       default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "sum"
     t.text     "addresses",  limit: 16777215
+=======
+    t.boolean  "ready",                 default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "sum"
+    t.text     "addresses"
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     t.string   "balance",    limit: 30
   end
 
@@ -389,7 +447,11 @@ ActiveRecord::Schema.define(version: 20150205011423) do
 
   create_table "tickets", force: true do |t|
     t.string   "title"
+<<<<<<< HEAD
     t.text     "content",    limit: 16777215
+=======
+    t.text     "content"
+>>>>>>> 8760dc19692535d960c682693830549312ebadb8
     t.string   "aasm_state"
     t.integer  "author_id"
     t.datetime "created_at"

@@ -11,7 +11,10 @@ module Private
       if current_user
         @btc_account = current_user.accounts.with_currency(:btc).first
         @dgb_account = current_user.accounts.with_currency(:dgb).first
-        @cny_account = current_user.accounts.with_currency(:cny).first
+
+      if current_user
+        @btc_account = current_user.accounts.with_currency(:btc).first
+        @dgb_account = current_user.accounts.with_currency(:dgb).first
       end
     end
 
